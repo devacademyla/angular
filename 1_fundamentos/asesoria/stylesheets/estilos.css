@@ -93,7 +93,7 @@ form {
 form h1 {
 	margin-top: 0;
 }
-form input[type=text] {
+form input[type=text], form input[type=email], form input[type=tel] {
 	box-sizing: border-box;
 	margin-bottom: 20px;
 	margin-top: 10px;
