@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="todoApp">
+<head>
+  <meta charset="UTF-8" />
+  <title>TODO con Angularjs</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="TodoCtrl">
+  <h2>Tienes <em>{{lista.length}}</em> cosas por hacer</h2>
+  <div class="item" ng-repeat="item in lista">
+    <input type="checkbox" ng-model="item.hecho"/>
+    <span ng-class="{ hecho : item.hecho }">{{item.titulo}}</span>
+  </div>
+  <form>
+    <input class="nuevo-item" placeholder="Necesito..." type="text" ng-model="textoTodo" />
+    <button class="agregar-item" ng-click="agregarTodo()"><h2>Añadir</h2></button>
+  </form>
+  <button class="limpiar" ng-click="quitarCompletos()">Limpiar</button>
+</body>
+</html>
