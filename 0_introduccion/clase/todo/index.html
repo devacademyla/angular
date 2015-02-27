@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="todoApp">
 <head>
-  <meta charset="UTF-8" />
-  <title>TODO con Angularjs</title>
+  <meta charset="UTF-8">
+  <title>TODO</title>
   <link rel="stylesheet" href="estilos.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
   <script src="app.js"></script>
@@ -14,8 +14,8 @@
     <span ng-class="{ hecho : item.hecho }">{{item.titulo}}</span>
   </div>
   <form>
-    <input class="nuevo-item" placeholder="Necesito..." type="text" ng-model="textoTodo" />
-    <button class="agregar-item" ng-click="agregarTodo()"><h2>Añadir</h2></button>
+    <input class="nuevo-item" type="text" ng-model="textoTodo" placeholder="Necesito..." />
+    <button class="agregar-item" ng-click="agregarTodo()">Añadir</button>
   </form>
   <button class="limpiar" ng-click="quitarCompletos()">Limpiar</button>
 </body>
