@@ -1,5 +1,18 @@
-var app = angular.module("devflix", []);
+angular.module("devflix", ["serie", "contacto", "ngRoute"]);
 
-app.controller("SeriesController", function ($scope) {
-  $scope.series = ['breaking-bad', 'dexter', 'family-guy', 'friends', 'gossip-girl', 'homeland', 'how-i-met-your-mother', 'marco-polo', 'modern-family', 'skins', 'suits', 'supernatural', 'the-office'];
+angular.module("devflix").config(function ($routeProvider, $locationProvider) {
+  $routeProvider
+    .when("/", {
+      templateUrl: "templates/series.html",
+      controller: "SeriesController"
+    })
+    .when("/contacto", {
+      templateUrl: "templates/contacto.html",
+      controller: "ContactoController"
+    })
+    .when("/series/:serie", {
+      templateUrl: "templates/serie.html"
+    });
+
+  $locationProvider.html5Mode(true);
 });
