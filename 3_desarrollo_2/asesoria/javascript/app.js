@@ -1,4 +1,4 @@
-angular.module("devflix", ["serie", "contacto", "ngRoute"]);
+angular.module("devflix", ["series", "serie", "contacto", "ngRoute"]);
 
 angular.module("devflix").config(function ($routeProvider, $locationProvider) {
   $routeProvider
@@ -11,7 +11,8 @@ angular.module("devflix").config(function ($routeProvider, $locationProvider) {
       controller: "ContactoController"
     })
     .when("/series/:serie", {
-      templateUrl: "templates/serie.html"
+      templateUrl: "templates/serie.html",
+      controller: "SerieController"
     });
 
   $locationProvider.html5Mode(true);

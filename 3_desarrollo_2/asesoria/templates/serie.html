@@ -1,12 +1,11 @@
 <section class="vista-previa">
-  <img src="images/preview-suits.jpg" alt="" />
+  <img ng-src="images/previews/preview-{{serie.slug}}.jpg" alt="" />
   <div class="serie-info">
-    <h1>Suits</h1>
-    <span>2011-2013</span>
-    <div class="tag">TV-14</div>
-    <span>3 temporadas</span>
+    <h1>{{serie.nombre}}</h1>
+    <span>{{serie.estreno}} - {{serie.estreno + serie.num_temporadas - 1}}</span>
+    <span>{{serie.num_temporadas}} temporadas</span>
     <p class="descripcion">
-      Mike Ross, un joven brillante pero que nunca terminó la universidad, impresiona a un importante abogado y consigue trabajo en un prestigioso bufete.
+      {{serie.descripcion}}
     </p>
     <button><i class="fa fa-plus"></i> Mi lista</button>
     <button><i class="fa fa-share"></i> Recomienda a un amigo</button>

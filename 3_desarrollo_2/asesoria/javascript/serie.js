@@ -1,5 +1,10 @@
 angular.module("serie", []);
 
-angular.module("serie").controller("SeriesController", ["$http", "$scope", function ($http, $scope) {
-  $scope.series = ['breaking-bad', 'dexter', 'family-guy', 'friends', 'gossip-girl', 'homeland', 'how-i-met-your-mother', 'marco-polo', 'modern-family', 'skins', 'suits', 'supernatural', 'the-office'];
+angular.module("serie").controller("SerieController", ["$scope", "$routeParams", "$filter", "seriesService", function ($scope, $routeParams, $filter, seriesService) {
+  seriesService.getSeries().then(function (data) {
+    $scope.series = data;
+    for (var i = 0; i < $scope.series.length; i++) {
+      if ($scope.series[i].slug === $routeParams.serie) $scope.serie = $scope.series[i]
+    }
+  });
 }]);
