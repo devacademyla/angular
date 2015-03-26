@@ -1,12 +1,10 @@
-angular.module("series", []);
+angular
+  .module("series")
+  .service("seriesService", seriesService);
 
-angular.module("series").controller("SeriesController", ["seriesService", "$scope", function (seriesService, $scope) {
-  seriesService.getSeries().then(function (data) {
-    $scope.series = data;
-  });
-}]);
+seriesService.$inject = ['$http'];
 
-angular.module("series").service("seriesService", ['$http', function ($http) {
+function seriesService($http) {
   this.getSeries = function () {
     return $http.get('http://devflix.herokuapp.com/series')
       .then(getSeriesComplete)
@@ -20,4 +18,4 @@ angular.module("series").service("seriesService", ['$http', function ($http) {
       $log.error('timelineService.getPostsFailed: ' + error);
     }
   };
-}]);
+}
