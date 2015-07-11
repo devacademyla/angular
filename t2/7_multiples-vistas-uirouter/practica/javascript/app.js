@@ -12,7 +12,8 @@ angular.module("devflix").config(function ($routeProvider, $locationProvider) {
     })
     .when("/series/:serie", {
       templateUrl: "templates/serie.html",
-      controller: "SerieController"
+      controller: "SerieController",
+      controllerAs: "serieCtrl"
     });
 
   $locationProvider.html5Mode(true);

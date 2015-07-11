@@ -78,7 +78,7 @@ button {
   margin-top: 20px;
   width: 13%;
 }
-.serie:nth-child(7n) {
+.serie:nth-child(8n) {
   margin-right: 0;
 }
 .serie img {
