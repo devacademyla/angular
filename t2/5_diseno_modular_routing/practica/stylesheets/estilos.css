@@ -75,10 +75,9 @@ button {
   display: inline-block;
   vertical-align: top;
   margin-right: 1.5%;
-  margin-top: 20px;
   width: 13%;
 }
-.serie:nth-child(7n) {
+.serie:nth-child(8) {
   margin-right: 0;
 }
 .serie img {
