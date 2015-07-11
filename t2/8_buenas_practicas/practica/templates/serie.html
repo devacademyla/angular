@@ -1,0 +1,13 @@
+<section class="vista-previa">
+  <img src="https://raw.githubusercontent.com/devacademyla/angular/master/t1/3_desarrollo_2/asesoria/images/previews/preview-{{serie.slug}}.jpg" alt="" />
+  <div class="serie-info">
+    <h1>{{serie.nombre}}</h1>
+    <span>{{serie.estreno}} - {{serie.estreno + serie.num_temporadas - 1}}</span><br />
+    <span>{{serie.num_temporadas}} temporadas</span>
+    <p class="descripcion">
+      {{serie.descripcion}}
+    </p>
+    <button><i class="fa fa-plus"></i> Mi lista</button>
+    <button><i class="fa fa-share"></i> Recomienda a un amigo</button>
+  </div>
+</section>

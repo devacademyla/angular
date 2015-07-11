@@ -1,0 +1,26 @@
+<section class="contacto">
+  <form name="miForm" novalidate>
+    <h1>Contáctanos</h1>
+    <label>Nombre</label>
+    <input name="nombre" placeholder="Jorge Perez" type="text" ng-model="nombre" required>
+    <div style="color:red" ng-show="miForm.nombre.$dirty && miForm.nombre.$invalid">
+      <span ng-show="miForm.nombre.$error.required">Nombre requerido.</span>
+    </div>
+    <label>Email</label>
+    <input name="email" placeholder="ejemplo@gmail.com" type="email" ng-model="email" required>
+    <div style="color:red" ng-show="miForm.email.$dirty && miForm.email.$invalid">
+      <span ng-show="miForm.email.$error.required">Email requerido.</span>
+      <span ng-show="miForm.email.$error.email">Email inválido.</span>
+    </div>
+    <label>Número</label>
+    <input name="telefono" placeholder="123456789" type="tel" ng-model="telefono" required>
+    <div style="color:red" ng-show="miForm.telefono.$dirty && miForm.telefono.$invalid">
+      <span ng-show="miForm.telefono.$error.required">Teléfono requerido.</span>
+    </div>
+    <label>Sitio Web</label>
+    <input name="website" placeholder="www.tusitio.com" type="text" ng-model="website">
+    <label>Mensaje</label>
+    <textarea placeholder="Mensaje" ng-model="mensaje"></textarea>
+    <input type="submit" value="Enviar" ng-disabled="miForm.nombre.$dirty && miForm.nombre.$invalid || miForm.email.$dirty && miForm.email.$invalid || miForm.telefono.$dirty && miForm.telefono.$invalid">
+  </form>
+</section>
