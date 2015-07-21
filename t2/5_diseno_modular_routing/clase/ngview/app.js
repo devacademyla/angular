@@ -4,19 +4,27 @@ angular.module("miApp").config(function ($routeProvider) {
   $routeProvider
     .when("/", {
       templateUrl: "app.html",
-      controller: "MiApp"
+      controller: "AppController"
     })
     .when("/bryam", {
       templateUrl: "app.html",
-      controller: "BryamCtrl"
-    }
-    .otherwise();
+      controller: "BryamController"
+    });
 });
 
-angular.module("miApp").controller("MiApp", ["$scope", function ($scope) {
-  $scope.mensaje = "inicio";
-}]);
+angular.module("miApp").controller("AppController", function ($scope) {
+  $scope.mensaje = "página de inicio";
+});
 
-angular.module("miApp").controller("BryamCtrl", ["$scope", function ($scope) {
+angular.module("miApp").controller("BryamController", function ($scope) {
   $scope.mensaje = "Bryam";
-}]);
+});
+
+
+
+
+
+
+
+
+

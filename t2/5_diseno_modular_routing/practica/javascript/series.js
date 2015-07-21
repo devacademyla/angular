@@ -1,6 +1,6 @@
-angular.module("devflix", []);
+angular.module("series", []);
 
-angular.module("devflix").controller("SeriesController", function ($scope) {
+angular.module("series").controller("SeriesController", function ($scope) {
   $scope.nuevosLanzamientos = [
     {
       titulo: "Dexter",
@@ -94,25 +94,7 @@ angular.module("devflix").controller("SeriesController", function ($scope) {
   ];
 });
 
-angular.module("devflix").controller("SerieController", function () {
-  this.serie = {
-    titulo: "Suits",
-    estreno: 2011,
-    tag: "TV-14",
-    numTemporadas: 3,
-    descripcion: "Mike Ross, un joven brillante pero que nunca terminó la universidad, impresiona a un importante abogado y consigue trabajo en un prestigioso bufete."
-  };
-});
-
-angular.module("devflix").controller("ContactoController", function ($scope) {
-  $scope.nombre = "";
-  $scope.email = "";
-  $scope.telefono = "";
-  $scope.website = "";
-  $scope.mensaje = "";
-});
-
-angular.module("devflix").directive("series", function () {
+angular.module("series").directive("series", function () {
   return {
     templateUrl: "series.html",
     scope: true,
@@ -125,17 +107,3 @@ angular.module("devflix").directive("series", function () {
     }
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-angular.module("devflix", []);
+angular.module("devflix", ["series"]);
 
 angular.module("devflix").controller("SerieController", function () {
   this.serie = {

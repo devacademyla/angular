@@ -8,6 +8,6 @@ app.controller("MiController", function () {
 
 app.directive("miDirectiva", function () {
   return function (scope, element, attrs) {
-    element.text(scope.app.mensaje + " " + attrs.mensaje);
+
   };
 });

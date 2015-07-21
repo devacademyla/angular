@@ -1,7 +1,8 @@
-var app = angular.module('miApp', []);
-app.directive("miFormulario", function () {
+angular.module('miApp', []);
+
+angular.module('miApp').directive("miFormulario", function () {
   return {
-    restrict: "A",
+    restrict: "EA",
     templateUrl: "formulario.html"
-  };
+  }
 });
