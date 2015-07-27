@@ -1,0 +1,5 @@
+<article class="serie" ng-repeat="serie in arreglo | filter: {titulo: series.busqueda}">
+  <a ng-href="/series/{{serie.slug}}">
+    <img ng-src="images/series/{{serie.slug}}.jpg" alt="{{titulo}}" />
+  </a>
+</article>

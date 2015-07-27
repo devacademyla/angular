@@ -1,19 +1,28 @@
-angular.module("devflix", ["series"]);
+angular.module("devflix", [
+  "ngRoute",
+  "series",
+  "serie",
+  "contacto"
+]);
 
-angular.module("devflix").controller("SerieController", function () {
-  this.serie = {
-    titulo: "Suits",
-    estreno: 2011,
-    tag: "TV-14",
-    numTemporadas: 3,
-    descripcion: "Mike Ross, un joven brillante pero que nunca terminó la universidad, impresiona a un importante abogado y consigue trabajo en un prestigioso bufete."
-  };
-});
+angular.module("devflix").config(function ($routeProvider, $locationProvider) {
+  $routeProvider
+    .when("/", {
+      templateUrl: "templates/seriesTemplate.html",
+      controller: "SeriesController"
+    })
+    .when("/contacto", {
+      templateUrl: "templates/contacto.html",
+      controller: "ContactoController"
+    })
+    .when("/series/:serie", {
+      templateUrl: "templates/serie.html",
+      controller: "SerieController",
+      controllerAs: "serieCtrl"
+    })
+    .otherwise({
+      redirectTo: "/"
+    });
 
-angular.module("devflix").controller("ContactoController", function ($scope) {
-  $scope.nombre = "";
-  $scope.email = "";
-  $scope.telefono = "";
-  $scope.website = "";
-  $scope.mensaje = "";
+  $locationProvider.html5Mode(true);
 });

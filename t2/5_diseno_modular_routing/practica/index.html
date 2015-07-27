@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="devflix">
 <head>
+  <base href="/">
 	<meta charset="UTF-8">
 	<title>Devflix</title>
 	<link rel="stylesheet" href="stylesheets/estilos.css" />
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' />
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="javascript/angular-route.js"></script>
   <script src="javascript/app.js"></script>
   <script src="javascript/series.js"></script>
+  <script src="javascript/serie.js"></script>
+  <script src="javascript/contacto.js"></script>
 </head>
 <body ng-controller="SeriesController">
 	<header>
@@ -16,19 +20,12 @@
 		<nav>
 			<ul>
 				<li><a href="#">Examinar</a></li>
-				<li><a href="#">Contáctanos</a></li>
+				<li><a href="/contacto">Contáctanos</a></li>
 				<li><a href="#">KiDS</a></li>
 			</ul>
 		</nav>
 		<input type="text" placeholder="Buscar" />
 	</header>
-  <section class="series">
-    <h2>Nuevos Lanzamientos</h2>
-    <series tipo="nuevosLanzamientos"></series>
-  </section>
-  <section class="series">
-    <h2>Recientemente añadidos</h2>
-    <series tipo="recientementeAnadidos"></series>
-  </section>
+  <div ng-view></div>
 </body>
 </html>

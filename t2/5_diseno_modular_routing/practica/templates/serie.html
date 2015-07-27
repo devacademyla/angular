@@ -1,0 +1,14 @@
+<section class="vista-previa">
+	<img ng-src="images/preview-{{serieCtrl.serie.titulo | lowercase}}.jpg" alt="" />
+	<div class="serie-info">
+		<h1>{{serieCtrl.serie.titulo}}</h1>
+		<span>{{serieCtrl.serie.estreno}}-{{serieCtrl.serie.estreno + serieCtrl.serie.numTemporadas}}</span>
+		<div class="tag">{{serieCtrl.serie.tag}}</div>
+		<span>{{serieCtrl.serie.numTemporadas}} <em ng-if="serieCtrl.serie.numTemporadas !== 1">temporadas</em><em ng-if="serieCtrl.serie.numTemporadas === 1">temporadas</em></span>
+		<p class="descripcion">
+			{{serieCtrl.serie.descripcion}}
+		</p>
+		<button><i class="fa fa-plus"></i> Mi lista</button>
+		<button><i class="fa fa-share"></i> Recomienda a un amigo</button>
+	</div>
+</section>

@@ -96,7 +96,7 @@ angular.module("series").controller("SeriesController", function ($scope) {
 
 angular.module("series").directive("series", function () {
   return {
-    templateUrl: "series.html",
+    templateUrl: "templates/series.html",
     scope: true,
     link: function (scope, element, attrs) {
       if (attrs.tipo === "nuevosLanzamientos") {
