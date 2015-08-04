@@ -1,7 +1,7 @@
 angular.module("miApp", ['ui.router']);
 
 angular.module('miApp').config(miAppConfig);
-angular.module('miApp').controller('ListaController', ListaController);
+angular.module('miApp').controller("ListaController", ListaController);
 
 miAppConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 ListaController.$inject = ['$scope'];

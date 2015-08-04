@@ -1,25 +1,25 @@
-angular.module("miApp", ['ui.router']);
+angular.module("miApp", ["ui.router"]);
 
-angular.module('miApp').config(miAppConfig);
-angular.module('miApp').controller('ListaController', ListaController);
+angular.module("miApp").config(miAppConfig);
+angular.module("miApp").controller("ListaController", ListaController);
 
-miAppConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
-ListaController.$inject = ['$scope'];
+miAppConfig.$inject = ['$stateProvider'];
+ListaController.$inject = ['$scope']
 
-function miAppConfig($stateProvider, $urlRouterProvider) {
+function miAppConfig($stateProvider) {
   $stateProvider
-    .state('inicio', {
-      url: '/inicio',
-      templateUrl: 'templates/inicio.html'
+    .state("inicio", {
+      url: "/inicio",
+      templateUrl: "templates/inicio.html"
     })
-    .state('lista', {
-      url: '/lista',
-      templateUrl: 'templates/lista.html',
-      controller: 'ListaController'
+    .state("lista", {
+      url: "/lista",
+      templateUrl: "templates/lista.html",
+      controller: "ListaController"
     })
-    .state('lista.item', {
-      url: '/:item',
-      templateUrl: 'templates/lista.item.html',
+    .state("lista.item",{
+      url: "/:item",
+      templateUrl: "templates/lista.item.html",
       controller: function ($scope, $stateParams) {
         $scope.item = $stateParams.item;
       }
@@ -28,16 +28,29 @@ function miAppConfig($stateProvider, $urlRouterProvider) {
 
 function ListaController($scope) {
   $scope.lista = [
-    {nombre: 'Leche'},
-    {nombre: 'Huevos'},
-    {nombre: 'Pan'},
-    {nombre: 'Queso'}
-  ];
-
-  $scope.seleccionarItem = function (itemSeleccionado) {
-    ($scope.lista).each(function (item) {
-      item.seleccionado = false;
-      if (itemSeleccionado === item) item.seleccionado = true;
-    })
-  };
+    {
+      nombre: "Leche"
+    },
+    {
+      nombre: "Huevos"
+    },
+    {
+      nombre: "Pan"
+    },
+    {
+      nombre: "Queso"
+    }
+  ]
 }
+
+
+
+
+
+
+
+
+
+
+
+

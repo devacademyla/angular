@@ -1,5 +1,7 @@
 <section class="series">
   <article ng-repeat="serie in series" class="serie">
-    <a ng-href="series/{{serie.slug}}"><img ng-src="https://raw.githubusercontent.com/devacademyla/angular/master/t1/3_desarrollo_2/asesoria/images/series/{{serie.slug}}.jpg" alt="Dexter" /></a>
+    <a ng-href="/series/{{serie.slug}}">
+      <img ng-src="images/series/{{serie.slug}}.jpg" alt="{{serie.nombre}}" />
+    </a>
   </article>
 </section>

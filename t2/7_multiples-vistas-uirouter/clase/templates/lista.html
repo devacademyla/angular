@@ -1,4 +1,4 @@
-<ul>
-  <li ng-repeat="item in lista"><a ng-href="#/lista/{{item.nombre | lowercase}}" ng-class="{active : item.seleccionado}">{{item.nombre}}</a></li>
+<ul class="lista">
+  <li ng-repeat="item in lista"><a ng-href="#/lista/{{item.nombre | lowercase}}">{{item.nombre}}</a></li>
 </ul>
 <div ui-view></div>

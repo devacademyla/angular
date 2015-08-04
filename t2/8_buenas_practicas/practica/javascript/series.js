@@ -1,23 +1,24 @@
 angular.module("series", []);
 
-angular.module("series").controller("SeriesController", ["seriesService", "$scope", function (seriesService, $scope) {
-  seriesService.getSeries().then(function (data) {
+angular.module("series").controller("SeriesController", function ($scope, SeriesService) {
+  SeriesService.getSeries().then(function (data) {
     $scope.series = data;
   });
-}]);
+});
 
-angular.module("series").service("seriesService", ['$http', function ($http) {
+angular.module("series").service("SeriesService", function ($http) {
   this.getSeries = function () {
-    return $http.get('http://devflix.herokuapp.com/series')
-      .then(getSeriesComplete)
+    return $http.get("http://devflix.herokuapp.com/series", { cache: true })
+      .then(getSeriesCompleted)
       .catch(getSeriesFailed);
 
-    function getSeriesComplete(response) {
-      return response.data;
+    function getSeriesCompleted(response) {
+      return response.data
     }
 
     function getSeriesFailed(error) {
-      $log.error('timelineService.getPostsFailed: ' + error);
+      console.log("Error");
     }
   };
-}]);
+});
+

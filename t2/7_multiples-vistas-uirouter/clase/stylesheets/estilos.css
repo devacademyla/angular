@@ -1,0 +1,51 @@
+body {
+  background-color: #DDD;
+  margin: 0;
+}
+nav {
+  background-color: #C02717;
+}
+nav ul, .lista {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  font-weight: bold;
+}
+nav ul li a {
+  color: white;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: black;
+}
+.lista {
+  float: left;
+}
+.lista li {
+  background-color: #55AA44;
+}
+.lista li:hover {
+  background-color: blue;
+}
+.lista li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
